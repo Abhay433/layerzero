@@ -1,0 +1,152 @@
+.footer {
+  background-color: #D6D6D6; /* Light grey base to match image_d40ac4.png */
+  color: #1A1A1A; /* Dark text */
+  padding: 80px 8% 40px 8%;
+  border-top: 1px solid #D1D1D1; /* Subtle divider */
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.footer-col h3 {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Newsletter Styles */
+.newsletter {
+  flex: 0 0 40%;
+}
+
+.input-label {
+  color: #666; /* Softer label color */
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.subscribe-box {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.subscribe-box input {
+  background: #EEEEEE; /* Very light input as seen in your form images */
+  border: 1px solid #D1D1D1;
+  padding: 12px 20px;
+  border-radius: 25px;
+  color: #1A1A1A;
+  width: 250px;
+  outline: none;
+}
+
+.subscribe-box input:focus {
+  border-color: #2DBB72; /* Brand green focus */
+}
+
+.btn-subscribe {
+  background: #FFFFFF; /* White pill-style button to match the form style */
+  color: #000;
+  border: 1px solid #C5C5C5;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-subscribe:hover {
+  background: #F1E7E7;
+  border-color: #999;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.circle-icon {
+  width: 35px;
+  height: 35px;
+  background-color: #D1D1D1; /* Light grey circles */
+  border-radius: 50%;
+}
+
+/* Link List Styles */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin-bottom: 12px;
+}
+
+ul li a {
+  color: #555555; /* Medium grey links for better contrast on light bg */
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+ul li a:hover {
+  color: #000; /* Turns solid black on hover */
+}
+
+/* Brand Section Styles */
+.brand-section {
+  margin-top: 50px;
+}
+
+.footer-logo {
+  color: #007520; /* Unified brand green */
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.footer-logo span {
+  color: #007520; /* Changed from white to black */
+}
+
+.tagline {
+  color: #777;
+  font-size: 0.85rem;
+  font-style: interit;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 1px solid #D1D1D1;
+  text-align: left;
+}
+
+.footer-bottom p {
+  color: #999; /* Very subtle copyright text */
+  font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .subscribe-box {
+    flex-direction: column;
+  }
+  .subscribe-box input {
+    width: 100%;
+  }
+}

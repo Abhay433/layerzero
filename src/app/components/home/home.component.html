@@ -1,0 +1,25 @@
+<section class="hero-section">
+  <div class="hero-content">
+    <h1 class="main-title">
+      Cognitive Geospatial <span class="mint">Infrastructure</span> <br>
+      for Mission-Critical Intelligence
+    </h1>
+    
+    <p class="hero-description">
+      Advanced geospatial intelligence platform combining satellite imagery, machine <br>
+      learning, and intuitive tools to engineer sovereign, physics-informed intelligence.
+    </p>
+    
+    <button class="btn-primary">Learn More</button>
+  </div>
+
+  <div class="features-grid">
+    @for (feature of features; track feature.title) {
+      <div class="feature-card">
+        <div class="icon-circle"></div>
+        <h3>{{ feature.title }}</h3>
+        <p>{{ feature.desc }}</p>
+      </div>
+    }
+  </div>
+</section>

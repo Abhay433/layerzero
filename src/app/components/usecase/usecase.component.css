@@ -1,0 +1,120 @@
+.usecase-container {
+  background-color: #D6D6D6; 
+  color: #1A1A1A;
+  padding: 100px 5%; /* Changed from 10% to 5% */
+  font-family: 'Inter', sans-serif;
+}
+
+.mint { color: #3B8E59; }
+
+/* Top Grid Section */
+.top-section { text-align: center; margin-bottom: 200px; }
+.section-title { font-size: 2.2rem; font-weight: 700; margin-bottom: 10px; }
+.section-subtitle { color: #333; font-size: 0.9rem; margin-bottom: 60px; }
+
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px; /* Increased gap for a more expansive feel */
+  max-width: 1200px; /* Increased from 1000px to allow "zoom" */
+  margin: 0 auto;
+}
+
+.cap-card {
+  background: #EBEBEB; 
+  padding: 50px 35px; /* Increased padding significantly */
+  border-radius: 24px; /* Slightly rounder corners to match the zoom scale */
+  text-align: left;
+  min-height: 200px; /* Increased height */
+}
+
+.cap-card h3 {
+  color: #3B8E59;
+  font-size: 1.25rem; /* Increased font size */
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.cap-card p {
+  color: #555;
+  font-size: 0.95rem; /* Increased font size for readability */
+  line-height: 1.6;
+}
+
+/* Bottom Integration Section */
+.integrate-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+.integrate-title { 
+  font-size: 3.2rem; /* Scaled up from 2.5rem */
+  font-weight: 700;
+  line-height: 1.1; 
+  margin-bottom: 35px;
+}
+
+.integrate-content p { 
+  font-size: 1.1rem; /* Scaled up from 0.9rem */
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  max-width: 550px;
+}
+
+/* Dark Contact Form */
+.contact-card-dark {
+  background: #404040; /* Dark Charcoal from image */
+  padding: 40px;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.contact-card-dark h3 {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.form-group { margin-bottom: 15px; }
+
+label {
+  display: block;
+  font-size: 0.7rem;
+  color: #BBB;
+  margin-bottom: 6px;
+}
+
+input {
+  width: 100%;
+  background: #4A4A4A; /* Slightly lighter than card */
+  border: 1px solid #555;
+  padding: 10px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.75rem;
+}
+
+input::placeholder { color: #777; }
+
+.submit-btn-gradient {
+  width: fit-content;
+  padding: 12px 40px; /* Increased padding */
+  background: linear-gradient(to bottom, #999, #666);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem; /* Increased font size */
+  margin-top: 15px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .capabilities-grid { grid-template-columns: repeat(2, 1fr); }
+  .integrate-section { grid-template-columns: 1fr; }
+}

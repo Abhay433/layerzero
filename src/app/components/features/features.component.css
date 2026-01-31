@@ -1,0 +1,104 @@
+/* Page Base */
+.features-page {
+  background-color: #D6D6D6; /* The light grey background from image */
+  color: #1A1A1A;
+  padding: 80px 10%;
+  font-family: 'Inter', sans-serif;
+  text-align: left; /* Image has left-aligned top text */
+}
+
+/* Typography */
+.main-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #1A1A1A;
+}
+
+.mint {
+  color: #3B8E59; /* The specific muted green from the image */
+}
+
+.intro-text {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 500px;
+  margin-bottom: 2rem;
+}
+
+/* Button */
+.btn-learn-dark {
+  background-color: #404040;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 150px;
+}
+
+/* Stack Section */
+.stack-section {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.stack-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.stack-subtitle {
+  color: #333;
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* The Cards - Light Version */
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.stack-card-light {
+  background: #EBEBEB; /* Slightly off-white/lighter than background */
+  padding: 50px 30px;
+  border-radius: 20px;
+  text-align: left;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+}
+
+.stack-card-light h3 {
+  color: #3B8E59; /* Green titles */
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.stack-card-light p {
+  color: #444;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .stack-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .stack-grid { grid-template-columns: 1fr; }
+  .main-heading { font-size: 2rem; }
+}
