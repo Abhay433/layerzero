@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FeaturesComponent } from "../usecase/usecase.component";
 import { UsecaseComponent } from "../features/features.component";
@@ -29,6 +29,23 @@ export class HomeComponent {
     }
   ];
 
+
+  @ViewChild('heroVideo') heroVideo!: ElementRef<HTMLVideoElement>;
+
+  ngAfterViewInit() {
+    const video = this.heroVideo.nativeElement;
+
+    video.muted = true;  // Required for autoplay
+    video.play().catch(err => {
+      console.warn('Autoplay blocked:', err);
+
+      // Fallback: play on first user interaction
+      document.addEventListener('click', () => {
+        video.play();
+      }, { once: true });
+    });
+  }
+
   scrollToFeatures() {
     const element = document.getElementById('use-cases');
     if (element) {
@@ -37,5 +54,7 @@ export class HomeComponent {
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
   }
+
   
 }
+

@@ -11,16 +11,15 @@
   align-items: center;
 }
 .hero-video {
-  /* Changed from absolute to relative/static flow */
-  position: relative; 
+  position: relative;
   display: block;
-  margin: 0 auto; /* Centers the video */
-  
-  /* Keep your styling */
+  margin: 0 auto;
+
   width: 70%;
-  max-width: 1000px; /* Prevents it from becoming too massive on ultra-wide screens */
-  aspect-ratio: 16 / 9; /* Maintains shape since height: 70% doesn't work well in flex flow */
-  
+  max-width: 1000px;
+  aspect-ratio: 16 / 9;
+  height: auto;
+
   background-color: #D6D6D6;
   object-fit: cover;
   z-index: 1;
@@ -29,10 +28,10 @@
   filter: brightness(0.95) contrast(1.05);
   border-radius: 24px;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
-  
-  /* Spacing between video and the features-grid below it */
-  margin-bottom: 80px; 
+
+  margin-bottom: 80px;
 }
+
 
 
 .hero-content {
