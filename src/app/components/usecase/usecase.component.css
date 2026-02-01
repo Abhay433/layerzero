@@ -1,120 +1,189 @@
-.usecase-container {
-  background-color: #D6D6D6; 
+/* Page Base */
+.features-page {
+  background-color: #D6D6D6;
   color: #1A1A1A;
-  padding: 100px 5%; /* Changed from 10% to 5% */
+  padding: 80px 8% 40px 8%;
+  
   font-family: 'Inter', sans-serif;
+
+  /* NEW: subtle depth so it doesn’t feel flat */
+  /* box-shadow: inset 0 1px 0 rgba(255,255,255,0.6); */
 }
 
-.mint { color: #3B8E59; }
-
-/* Top Grid Section */
-.top-section { text-align: center; margin-bottom: 200px; }
-.section-title { font-size: 2.2rem; font-weight: 700; margin-bottom: 10px; }
-.section-subtitle { color: #333; font-size: 0.9rem; margin-bottom: 60px; }
-
-.capabilities-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px; /* Increased gap for a more expansive feel */
-  max-width: 1200px; /* Increased from 1000px to allow "zoom" */
-  margin: 0 auto;
+/* Typography */
+.main-heading {
+  font-size: 2.7rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  color: #0F172A;
 }
 
-.cap-card {
-  background: #EBEBEB; 
-  padding: 50px 35px; /* Increased padding significantly */
-  border-radius: 24px; /* Slightly rounder corners to match the zoom scale */
-  text-align: left;
-  min-height: 200px; /* Increased height */
+.mint { 
+  color: #3B8E59; 
+  position: relative;
 }
 
-.cap-card h3 {
-  color: #3B8E59;
-  font-size: 1.25rem; /* Increased font size */
-  font-weight: 700;
-  margin-bottom: 18px;
-}
-
-.cap-card p {
-  color: #555;
-  font-size: 0.95rem; /* Increased font size for readability */
-  line-height: 1.6;
-}
-
-/* Bottom Integration Section */
-.integrate-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-  padding-bottom: 100px;
-}
-
-.integrate-title { 
-  font-size: 3.2rem; /* Scaled up from 2.5rem */
-  font-weight: 700;
-  line-height: 1.1; 
-  margin-bottom: 35px;
-}
-
-.integrate-content p { 
-  font-size: 1.1rem; /* Scaled up from 0.9rem */
-  color: #333;
-  line-height: 1.7;
-  margin-bottom: 25px;
-  max-width: 550px;
-}
-
-/* Dark Contact Form */
-.contact-card-dark {
-  background: #404040; /* Dark Charcoal from image */
-  padding: 40px;
-  border-radius: 20px;
-  color: #fff;
-}
-
-.contact-card-dark h3 {
-  font-size: 1.1rem;
-  margin-bottom: 25px;
-  font-weight: 600;
-}
-
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-.form-group { margin-bottom: 15px; }
-
-label {
-  display: block;
-  font-size: 0.7rem;
-  color: #BBB;
-  margin-bottom: 6px;
-}
-
-input {
+.mint::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
   width: 100%;
-  background: #4A4A4A; /* Slightly lighter than card */
-  border: 1px solid #555;
-  padding: 10px;
-  border-radius: 8px;
-  color: #fff;
-  font-size: 0.75rem;
+  height: 2px;
+  background: rgba(59, 142, 89, 0.35);
+  border-radius: 10px;
 }
 
-input::placeholder { color: #777; }
+.intro-text {
+  color: #374151;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  max-width: 600px; /* Reduced max-width since it's now in a half-column */
+  margin-bottom: 42px;
+  font-weight: 400;
+}
 
-.submit-btn-gradient {
-  width: fit-content;
-  padding: 12px 40px; /* Increased padding */
-  background: linear-gradient(to bottom, #999, #666);
+/* Button */
+.btn-learn-dark {
+  background: linear-gradient(180deg, #404040, #2F2F2F);
   color: #fff;
   border: none;
-  border-radius: 25px;
+  padding: 12px 32px;
+  border-radius: 22px;
+  font-size: 0.85rem;
+  font-weight: 600;
   cursor: pointer;
-  font-size: 1rem; /* Increased font size */
-  margin-top: 15px;
+  margin-bottom: 100px; /* space between Deterministic and  Empowering */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+  transition: all 0.25s ease;
+}
+
+.btn-learn-dark:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.4);
+}
+
+/* Stack Section */
+.stack-section {
+  text-align: center;
+  margin-top: 120px;
+}
+
+.stack-title {
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.stack-subtitle {
+  color: #374151;        /* softer professional grey */
+  font-size: 1.25rem;
+  line-height: 1.6;
+  max-width: 810px;
+  margin: 0 auto 42px auto;
+  font-weight: 400;
+}
+
+/* Grid */
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+/* Cards */
+.stack-card-light {
+  background: linear-gradient(180deg, #F2F2F2 0%, #EAEAEA 100%);
+  padding: 55px 36px;
+  border-radius: 26px;
+  text-align: left;
+  min-height: 380px;
+  position: relative;
+  overflow: hidden;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.10),
+    inset 0 1px 0 rgba(255,255,255,0.9);
+  transition: all 0.35s ease;
+}
+
+.stack-card-light::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.12), transparent 65%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.stack-card-light:hover::before {
+  opacity: 1;
+}
+
+.stack-card-light:hover {
+  transform: translateY(-10px) scale(1.01);
+  box-shadow:
+    0 22px 45px rgba(0,0,0,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.95);
+}
+
+.stack-card-light h3 {
+  color: #166534;
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.04em;
+}
+
+.stack-card-light p {
+  color: #4B5563;
+  font-size: 0.99rem;
+  line-height: 1.7;
 }
 
 /* Responsive */
-@media (max-width: 900px) {
-  .capabilities-grid { grid-template-columns: repeat(2, 1fr); }
-  .integrate-section { grid-template-columns: 1fr; }
+@media (max-width: 968px) {
+  .intro-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .intro-content {
+    text-align: center;
+  }
+  .intro-text {
+    margin: 0 auto 42px auto;
+  }
+}
+
+.intro-container {
+  display: flex;
+  align-items: center; /* Vertically centers text and image */
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 60px; /* Space between the text and the image */
+}
+
+.intro-content {
+  flex: 1; /* Takes up proportional space */
+  text-align: left;
+}
+.intro-image-wrapper {
+  margin-top: -20px;
+  /* Change flex from 1 to 1.5 (or higher) to make this section wider/bigger */
+  flex: 1.5; 
+  display: flex;
+  /* Change center to flex-end to push the image to the right side */
+  justify-content: flex-end; 
+}
+.side-image {
+  /* Increase max-width if you want it to grow even larger within that space */
+  max-width: 90%; 
+  height: auto;
+  border-radius: 20px;
+  /* Optional: Fine-tune the "right" position if flex-end is too far */
+  /* transform: translateX(20px); */
 }

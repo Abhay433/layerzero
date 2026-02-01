@@ -2,15 +2,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* Zoomed effect: Increased vertical padding from 1.5rem to 2.2rem */
-  padding: 1.8rem 8%; 
-  background-color: #D6D6D6;
-  /* The thin line: Using a slightly darker shade for visibility on the grey background */
-  border-bottom: 1px solid #BDBDBD; 
+  padding: 1.8rem 8%;
+  background: #D6D6D6; /* softer, more professional than dark grey */
+  border-bottom: 1px solid #E5E7EB;
   position: sticky;
   top: 0;
   z-index: 1000;
+
+  /* NEW */
+  backdrop-filter: saturate(1.2) blur(4px);
 }
+
 
 .logo {
   color: #007520; 
@@ -21,39 +23,63 @@
   cursor: pointer;
 }
 
-.logo span {
-  color: #007520;
+.logo {
+  color: #0F5132; /* slightly richer green */
+  font-weight: 800;
+  font-size: 1.7rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
+.logo span {
+  color: #0F5132; /* subtle contrast for ZERO */
+}
+
+
 .nav-links a {
-  color: #333333; /* Slightly darker for better contrast */
+  color: #1F2933;
   text-decoration: none;
-  margin: 0 2rem; /* Increased spacing between links */
-  /* Zoomed effect: Increased font size from 0.9rem to 1.05rem */
-  font-size: 1.05rem; 
+  margin: 0 2rem;
+  font-size: 1.05rem;
   font-weight: 600;
-  transition: color 0.3s ease;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #16A34A;
+  transition: width 0.25s ease;
 }
 
 .nav-links a:hover {
   color: #000000;
 }
 
+.nav-links a:hover::after {
+  width: 100%;
+}
 .demo-btn {
-  background: #1A1A1A;
+  background: #0F172A;
   color: #FFFFFF;
-  border: 1px solid #333;
-  /* Zoomed effect: Larger padding for a more substantial button */
-  padding: 0.8rem 2rem; 
-  border-radius: 50px;
-  font-size: 1rem; /* Scaled up from 0.85rem */
+  border: 1px solid transparent;
+  padding: 0.8rem 2.1rem;
+  border-radius: 999px;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
 .demo-btn:hover {
-  background: #000000;
-  border-color: #3B8E59; /* Matching the mint green on hover */
+  background: #020617;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
   transform: translateY(-1px);
 }

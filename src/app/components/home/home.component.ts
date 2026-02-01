@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FeaturesComponent } from "../features/features.component";
-import { UsecaseComponent } from "../usecase/usecase.component";
+import { FeaturesComponent } from "../usecase/usecase.component";
+import { UsecaseComponent } from "../features/features.component";
 
 @Component({
   selector: 'app-home',
@@ -28,4 +28,14 @@ export class HomeComponent {
       desc: 'Streamline the entire process of data analysis, visualization and interpretation on a single interface.' 
     }
   ];
+
+  scrollToFeatures() {
+    const element = document.getElementById('use-cases');
+    if (element) {
+      const yOffset = -80; // adjust if you have a fixed navbar
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  }
+  
 }

@@ -1,4 +1,5 @@
 <section class="hero-section">
+  
   <div class="hero-content">
     <h1 class="main-title">
       Cognitive Geospatial <span class="mint">Infrastructure</span> <br>
@@ -10,8 +11,13 @@
       learning, and intuitive tools to engineer sovereign, physics-informed intelligence.
     </p>
     
-    <button class="btn-primary">Learn More</button>
+    <button class="btn-primary" (click)="scrollToFeatures()">Explore</button>
+
   </div>
+
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="assets/background.mp4" type="video/mp4">
+  </video>
 
   <div class="features-grid">
     @for (feature of features; track feature.title) {

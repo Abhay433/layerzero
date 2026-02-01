@@ -1,26 +1,29 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-usecase',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
+  selector: 'app-features',
+  imports: [CommonModule],
   templateUrl: './usecase.component.html',
   styleUrl: './usecase.component.css'
 })
-export class UsecaseComponent {
-  capabilities = [
-    { title: 'Unified 3D Workspace', desc: 'High-performance environment for multi-layer Earth data exploration and visualization.' },
-    { title: 'Smart Remote Sensing', desc: 'Automated ingestion of Sentinel, Landsat, ASTER, and commercial imagery with AI processing.' },
-    { title: 'AI Modeling Workflows', desc: 'Classification, prospectivity prediction, change detection, and geophysical inversion.' },
-    { title: 'Raster & Vector Processing', desc: 'Load, visualize, and process complex geospatial datasets with customizable workflows.' },
-    { title: 'Enterprise Grade & Scalable', desc: 'Built and trained by top researchers, engineers and industry professionals. Ability to handle massive data sets.' },
-    { title: 'Custom feature development', desc: 'Customization ability to meet your business needs upto any level.' }
+export class FeaturesComponent {
+  stackItems = [
+    { 
+      title: 'DEFENSE & COMBAT PRECISION', 
+      desc: 'Automatically flag anomalies in enemy activity, from the subtle establishment of new supply caches to the gradual reinforcement of defensive perimeters.' 
+    },
+    { 
+      title: 'DISASTER MANAGEMENT RESPONSE', 
+      desc: 'When a disaster strikes, Lizo provides a Real-Time Damage Assessment. This identifies blocked transit routes, dammed rivers, and structural failures within minutes, enabling command centers to coordinate rescue operations with absolute environmental clarity.' 
+    },
+    { 
+      title: 'CRITICAL LOGISTICS', 
+      desc: 'Using Terrain-Aware routing, Lizo Intelligence provides the spatial backbone for autonomous navigation and predictive sustainment, ensuring the flow of essentials remains uninterrupted where traditional infrastructure collapses.' 
+    },
+    { 
+      title: 'HIGH RESOLUTION BATHYMETRY', 
+      desc: 'Lizo integrates a combination of data for 3D Floor Mapping to provide an automated, repeatable and real-time reporting for anomaly detection.' 
+    }
   ];
-
-  onSubmit() {
-    console.log('Form Submitted!');
-  }
-  
 }
