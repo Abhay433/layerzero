@@ -30,7 +30,9 @@
   <div class="features-grid">
     @for (feature of features; track feature.title) {
       <div class="feature-card">
-        <div class="icon-circle"></div>
+        <div class="icon-circle">
+          <img [src]="feature.icon" [alt]="feature.title" />
+        </div>
         <h3>{{ feature.title }}</h3>
         <p>{{ feature.desc }}</p>
       </div>
