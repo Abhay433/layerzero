@@ -8,22 +8,28 @@ import { CommonModule } from '@angular/common';
   styleUrl: './usecase.component.css'
 })
 export class FeaturesComponent {
+
+  onExplore(item: any) {
+    console.log('Explore clicked:', item.title);
+  }
   stackItems = [
     { 
-      title: 'DEFENSE & COMBAT PRECISION', 
-      desc: 'Automatically flag anomalies in enemy activity, from the subtle establishment of new supply caches to the gradual reinforcement of defensive perimeters.' 
+      title: 'HIGH RESOLUTION BATHYMETRY', 
+      desc: 'LizoAI streams raw acoustic data from multibeam sonar systems to create clean bathymetry and backscatter products during live acquisition. Utilizing adaptive AI models, the platform automatically filters acoustic noise, corrects for vessel motion, and rejects outliers dynamically. It generates instant bathymetric grids and normalized backscatter mosaics directly onboard the vessel.' 
     },
+   
     { 
       title: 'DISASTER MANAGEMENT RESPONSE', 
-      desc: 'When a disaster strikes, Lizo provides a Real-Time Damage Assessment. This identifies blocked transit routes, dammed rivers, and structural failures within minutes, enabling command centers to coordinate rescue operations with absolute environmental clarity.' 
+      desc: 'Transforming live airborne scanning data into instant, hydraulically reliable terrain models, LizoAI accelerates emergency flood response. Using AI-driven filtering, the platform accurately maps critical flow paths and infrastructure beneath dense vegetation in real-time. This allows command centers to immediately predict flood extents and coordinate safe evacuations without waiting for post-event data processing.' 
     },
     { 
       title: 'CRITICAL LOGISTICS', 
-      desc: 'Using Terrain-Aware routing, Lizo Intelligence provides the spatial backbone for autonomous navigation and predictive sustainment, ensuring the flow of essentials remains uninterrupted where traditional infrastructure collapses.' 
+      desc: 'To determine off-road vehicle passability, LizoAI combines real-time land cover classification, soil moisture indexes, and Digital Elevation Model (DEM) slope calculations. By generating these dynamic traversability cost-surfaces, the platform ensures critical supply chain continuity.'
     },
+   
     { 
-      title: 'HIGH RESOLUTION BATHYMETRY', 
-      desc: 'Lizo integrates a combination of data for 3D Floor Mapping to provide an automated, repeatable and real-time reporting for anomaly detection.' 
+      title: 'DEFENSE & COMBAT PRECISION', 
+      desc: 'LizoAI automates the ingestion of daily Synthetic Aperture Radar (SAR) and high-resolution optical data to run continuous time-series change detection over strategic areas. Using pixel-based classification and deep learning object detection nodes, the platform practically isolates new infrastructure development, tracks heavy vehicle movements, and maps the expansion of defensive trenches.' 
     }
   ];
 }

@@ -1,7 +1,7 @@
 .hero-section {
   /* Removed position: relative and overflow: hidden to allow the video to push the grid down */
   background: #D6D6D6;
-  padding: 120px 20px 80px 20px;
+  padding: 24px 20px 64px 20px;
   text-align: center;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   
@@ -10,29 +10,46 @@
   flex-direction: column;
   align-items: center;
 }
-.hero-video {
-  background-color: transparent;
-  position: relative;
-  display: block;
-  margin: 0 auto;
 
+.video-wrapper {
+  position: relative;
   width: 70%;
   max-width: 1000px;
-  /* aspect-ratio: 16 / 9; */
-  height: auto;
-
-  background-color: #D6D6D6;
-  object-fit: cover;
-  z-index: 1;
-
-  opacity: 0.95;
-  filter: brightness(0.95) contrast(1.05);
+  margin: 0 auto 80px;
   border-radius: 24px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
-
-  margin-bottom: 80px;
+  overflow: hidden; /* This clips the video to the radius */
 }
 
+.video-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* This creates a subtle inner vignette so the edges look polished */
+  box-shadow: inset 0 0 40px rgba(0,0,0,0.15); 
+  pointer-events: none;
+  border-radius: 24px;
+}
+.hero-video {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  filter: brightness(0.95) contrast(1.05);
+}
+
+.hero-video-container {
+  position: relative;
+  display: inline-block; /* or block with margin auto */
+}
+
+/* Add a subtle glow behind the video */
+.hero-video::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  box-shadow: inset 0 0 100px rgba(0,0,0,0.2);
+  pointer-events: none;
+  border-radius: 24px;
+}
 
 
 .hero-content {
@@ -57,12 +74,15 @@
 }
 
 .hero-description {
-  color: #374151;        /* softer professional grey */
+  color: #374151;        /* keep same color */
   font-size: 1.25rem;
-  line-height: 1.6;
-  max-width: 920px;
-  margin: 0 auto 42px auto;
+  line-height: 1.7;     /* slightly more breathing room */
+  max-width: 880px;     /* tighter width = more premium look */
+  margin: 0 auto 48px auto;
   font-weight: 400;
+
+  letter-spacing: 0.01em;       /* subtle professional spacing */
+  text-align: center;          /* official hero style */
 }
 
 

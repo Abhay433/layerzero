@@ -1,5 +1,5 @@
 <section class="features-page">
-  <div class="intro-container">
+  <!-- <div class="intro-container">
     <div class="intro-content">
       <h2 class="main-heading">Deterministic Spatial Awareness <br>with <span class="mint">Lizo Intelligence</span></h2>
       <p class="intro-text">
@@ -14,7 +14,7 @@
     <div class="intro-image-wrapper">
       <img src="assets/change2.png" alt="Spatial Intelligence" class="side-image">
     </div>
-  </div>
+  </div> -->
 
   <div class="stack-section">
     <h2 class="stack-title">Empowering Precision-Dependent <span class="mint">Industries</span></h2>
@@ -28,6 +28,11 @@
         <div class="stack-card-light">
           <h3>{{ item.title }}</h3>
           <p>{{ item.desc }}</p>
+
+           <!-- Explore Button -->
+      <button class="explore-btn" (click)="onExplore(item)">
+        Explore →
+      </button>
         </div>
       }
     </div>

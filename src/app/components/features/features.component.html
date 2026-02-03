@@ -1,14 +1,36 @@
 <section class="usecase-container">
   <div class="top-section">
     <div class="satellite-visuals">
-      <!-- Title Image -->
-      <img src="assets/title.png" alt="Change Detection Title" class="satellite-title" />
-    
-      <!-- Three images row -->
+      <h2 class="main-heading">
+        Autonomous Temporal Analysis with <span class="mint">Lizo Intelligence</span>
+      </h2>
+      <p class="hero-description">
+        The LizoAI deep learning engine cuts through massive volumes of time-series satellite data to expose critical infrastructural shifts—delivering unbroken strategic foresight to track covert border encroachments, monitor global supply depots, and assess post-disaster terrain deformation.
+      </p>
       <div class="satellite-row">
-        <img src="assets/image2017.png" alt="Baseline 2017" class="satellite-img" />
-        <img src="assets/image2021.png" alt="Latest 2021" class="satellite-img" />
-        <img src="assets/detected.png" alt="Change Detected" class="satellite-img" />
+        <div class="satellite-card">
+          <div class="card-header">
+            Sentinel-2 Band-2<br><strong>(2017)</strong>
+          </div>
+          <img src="assets/image2017.png" alt="Baseline 2017" class="satellite-img" />
+          <div class="card-footer">Baseline Satellite Imagery</div>
+        </div>
+      
+        <div class="satellite-card">
+          <div class="card-header">
+            Sentinel-2 Band-2<br><strong>(2021)</strong>
+          </div>
+          <img src="assets/image2021.png" alt="Latest 2021" class="satellite-img" />
+          <div class="card-footer">Recent Satellite Imagery</div>
+        </div>
+      
+        <div class="satellite-card">
+          <div class="card-header">
+            Infrastructure Change Mask<br><strong>(Detection Result)</strong>
+          </div>
+          <img src="assets/detected.png" alt="Change Detected" class="satellite-img" />
+          <div class="card-footer">Detected Changes (White Areas)</div>
+        </div>
       </div>
     </div>
     

@@ -7,25 +7,28 @@
     </h1>
     
     <p class="hero-description">
-      Advanced geospatial intelligence platform combining satellite imagery, machine <br>
-      learning, and intuitive tools to engineer sovereign, physics-informed intelligence.
+      Advanced geospatial intelligence platform combining satellite imagery, machine learning, 
+      and autonomous processing pipelines to transform complex spatial data into real-time operational intelligence.
     </p>
     
     <button class="btn-primary" (click)="scrollToFeatures()">Explore</button>
 
   </div>
 
-  <video 
-  #heroVideo
-  class="hero-video"
-  autoplay
-  muted
-  loop
-  playsinline
-  preload="auto"
->
-  <source src="assets/background.mp4" type="video/mp4">
-</video>
+  <div class="video-wrapper">
+    <video 
+    #heroVideo
+    class="hero-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    disableRemotePlayback
+    oncanplay="this.muted=true">
+    <source src="assets/lizo.mp4" type="video/mp4">
+  </video>
+  </div>
 
   <div class="features-grid">
     @for (feature of features; track feature.title) {
