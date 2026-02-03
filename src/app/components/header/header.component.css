@@ -83,3 +83,30 @@
   box-shadow: 0 10px 24px rgba(0,0,0,0.18);
   transform: translateY(-1px);
 }
+
+/* ============================
+   PHONE RESPONSIVE – HEADER ONLY
+   ============================ */
+   @media (max-width: 600px) {
+
+    .navbar {
+      padding: 1rem 5%;
+      gap: 10px;
+    }
+  
+    .logo {
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+    }
+  
+    .nav-links {
+      display: none; /* hide links on phone */
+    }
+  
+    .demo-btn {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.85rem;
+      white-space: nowrap;
+    }
+  }
+  

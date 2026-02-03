@@ -18,10 +18,11 @@
   margin-bottom: 200px; 
 }
 .section-title {
-  font-size: 2.4rem;
+  font-size: 3.0rem;
   font-weight: 900;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   margin-bottom: 1rem;
+  margin-top: 70px;
 }
 
 .section-subtitle {
@@ -192,14 +193,135 @@ input::placeholder {
   }
 }
 
-.pill-label {
-  display: inline-block;
-  margin-bottom: 18px; /* Maintains the exact gap to the title */
+
+
+/* Satellite Visual Section */
+.satellite-visuals {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px; /* similar spacing to your old pill-label */
 }
 
-.pill-img {
+.satellite-title {
   display: block;
-  width: 1200px;    /* Adjust this width based on your image size */
-  height: 400px;      /* Fixed height for consistency */
-  margin: 0 auto;
+  width: 850px;   /* adjust if your title is larger */
+  max-width: 95%;
+  margin: -20px auto 40px auto;
 }
+
+.satellite-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px; /* aligns with capabilities grid width */
+  align-items: start;
+}
+
+.satellite-img {
+  width: 91%;              /* ⬅ slightly smaller than full width */
+  max-width: 370px;       /* ⬅ cap size so they don’t get too big on wide screens */
+  height: auto;           /* keep full image */
+  object-fit: contain;   /* no cropping */
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  margin: 0 auto;         /* center each image in its column */
+}
+
+.satellite-img:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 18px 38px rgba(0,0,0,0.28);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .satellite-row {
+    grid-template-columns: 1fr;
+  }
+
+  .satellite-img {
+    height: auto;
+  }
+}
+
+
+
+/* ============================
+   PHONE RESPONSIVE FIXES ONLY
+   ============================ */
+   @media (max-width: 600px) {
+
+    .usecase-container {
+      padding: 60px 6%;
+    }
+  
+    .top-section {
+      margin-bottom: 120px;
+    }
+  
+    .section-title {
+      font-size: 2rem;
+      margin-top: 40px;
+    }
+  
+    .section-subtitle {
+      font-size: 1rem;
+      margin-bottom: 28px;
+      padding: 0 6px;
+    }
+  
+    /* Capabilities Grid → 1 column on phone */
+    .capabilities-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .cap-card {
+      padding: 32px 24px;
+    }
+  
+    /* Integration Section → stack */
+    .integrate-section {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+  
+    .integrate-title {
+      font-size: 2.2rem;
+      text-align: center;
+    }
+  
+    .integrate-content p {
+      font-size: 1rem;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+  
+    /* Contact Form */
+    .contact-card-dark {
+      padding: 32px 24px;
+    }
+  
+    .submit-btn-gradient {
+      width: 100%;
+    }
+  
+    /* Satellite Section */
+    .satellite-title {
+      width: 100%;
+      margin: 0 auto 24px auto;
+    }
+  
+    .satellite-row {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+  
+    .satellite-img {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  

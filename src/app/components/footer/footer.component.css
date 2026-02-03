@@ -203,3 +203,92 @@ ul li a:hover {
     width: 100%;
   }
 }
+
+
+
+/* ============================
+   PHONE RESPONSIVE – FOOTER ONLY
+   ============================ */
+   @media (max-width: 600px) {
+
+    .footer {
+      padding: 30px 20px 20px;
+    }
+  
+    .footer-container {
+      flex-direction: column;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+  
+    .newsletter {
+      flex: 1 1 100%;
+    }
+  
+    .footer-col h3 {
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+    }
+  
+    .input-label {
+      margin-left: 0;
+      font-size: 0.9rem;
+    }
+  
+    .subscribe-box {
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    .subscribe-box input {
+      width: 100%;
+      padding: 12px 18px;
+      font-size: 0.9rem;
+    }
+  
+    .btn-subscribe {
+      width: 100%;
+      padding: 12px 0;
+      font-size: 0.9rem;
+    }
+  
+    .social-icons {
+      justify-content: center;
+      padding: 10px 0 0;
+    }
+  
+    .circle-icon {
+      width: 44px;
+      height: 44px;
+    }
+  
+    .social-icon-img {
+      width: 24px;
+      height: 24px;
+    }
+  
+    .brand-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+  
+    .footer-logo {
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+    }
+  
+    .tagline {
+      font-size: 0.9rem;
+    }
+  
+    .footer-bottom {
+      margin-top: 40px;
+      padding-top: 20px;
+    }
+  
+    .footer-bottom p {
+      font-size: 0.75rem;
+      padding: 0 10px;
+    }
+  }
+  

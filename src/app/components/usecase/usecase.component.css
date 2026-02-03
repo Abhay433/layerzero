@@ -191,3 +191,93 @@
   /* Optional: Fine-tune the "right" position if flex-end is too far */
   /* transform: translateX(20px); */
 }
+
+
+
+/* ============================
+   PHONE RESPONSIVE – USECASE ONLY
+   ============================ */
+   @media (max-width: 600px) {
+
+    .features-page {
+      padding: 60px 16px 30px 16px;
+    }
+  
+    .intro-container {
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .intro-content {
+      margin-left: 0;      /* remove negative margin on phone */
+      text-align: center;
+    }
+  
+    .main-heading {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+  
+    .intro-text {
+      font-size: 0.95rem;
+      line-height: 1.55;
+      max-width: 100%;
+      margin-bottom: 28px;
+      padding: 0 6px;
+    }
+  
+    .btn-learn-dark {
+      width: 100%;
+      padding: 12px 0;
+      margin-bottom: 60px;
+      font-size: 0.8rem;
+    }
+  
+    .intro-image-wrapper {
+      margin-top: 0;
+      justify-content: center;
+    }
+  
+    .side-image {
+      max-width: 100%;
+      border-radius: 16px;
+    }
+  
+    .stack-section {
+      margin-top: 80px;
+    }
+  
+    .stack-title {
+      font-size: 1.9rem;
+      line-height: 1.2;
+    }
+  
+    .stack-subtitle {
+      font-size: 0.95rem;
+      line-height: 1.55;
+      margin-bottom: 28px;
+      padding: 0 6px;
+    }
+  
+    .stack-grid {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+  
+    .stack-card-light {
+      padding: 30px 22px;
+      min-height: auto;
+    }
+  
+    .stack-card-light h3 {
+      font-size: 1.05rem;
+      margin-bottom: 12px;
+    }
+  
+    .stack-card-light p {
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+  }
+  
