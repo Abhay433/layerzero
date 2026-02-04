@@ -17,6 +17,15 @@ export class UsecaseComponent {
     if(item.title === 'HIGH RESOLUTION BATHYMETRY') {
       this.router.navigate(['/bathymetry']);
     }
+    if (item.title === 'DISASTER MANAGEMENT RESPONSE') {
+      this.router.navigate(['/disaster']);
+    }
+    if (item.title === 'CRITICAL LOGISTICS') {
+      this.router.navigate(['/critical']);
+    }
+    if(item.title === 'DEFENSE & COMBAT PRECISION') {
+      this.router.navigate(['/defense']);
+    }
   }
   stackItems = [
     { 
