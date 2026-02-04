@@ -1,16 +1,22 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-features',
+  selector: 'app-usecase',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './usecase.component.html',
   styleUrl: './usecase.component.css'
 })
-export class FeaturesComponent {
+export class UsecaseComponent {
+  constructor(private router: Router) {}
 
   onExplore(item: any) {
-    console.log('Explore clicked:', item.title);
+    console.log('Explore clicked for:', item.title);
+    if(item.title === 'HIGH RESOLUTION BATHYMETRY') {
+      this.router.navigate(['/bathymetry']);
+    }
   }
   stackItems = [
     { 

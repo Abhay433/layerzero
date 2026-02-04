@@ -1,11 +1,11 @@
 .hero-section {
-  /* Removed position: relative and overflow: hidden to allow the video to push the grid down */
   background: #D6D6D6;
-  padding: 24px 20px 64px 20px;
+
+  /* reduced top/bottom spacing */
+  padding: 40px 20px 56px 20px;
+
   text-align: center;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  
-  /* Added Flexbox to handle the vertical stacking naturally */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,20 +15,23 @@
   position: relative;
   width: 70%;
   max-width: 1000px;
-  margin: 0 auto 80px;
+
+  /* reduced bottom gap */
+  margin: 0 auto 48px;
+
   border-radius: 24px;
-  overflow: hidden; /* This clips the video to the radius */
+  overflow: hidden;
 }
 
 .video-wrapper::after {
   content: "";
   position: absolute;
   inset: 0;
-  /* This creates a subtle inner vignette so the edges look polished */
-  box-shadow: inset 0 0 40px rgba(0,0,0,0.15); 
+  box-shadow: inset 0 0 32px rgba(0,0,0,0.15);
   pointer-events: none;
   border-radius: 24px;
 }
+
 .hero-video {
   width: 100%;
   display: block;
@@ -36,70 +39,62 @@
   filter: brightness(0.95) contrast(1.05);
 }
 
-.hero-video-container {
-  position: relative;
-  display: inline-block; /* or block with margin auto */
-}
-
-/* Add a subtle glow behind the video */
+/* remove broken after pseudo-element */
 .hero-video::after {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  box-shadow: inset 0 0 100px rgba(0,0,0,0.2);
-  pointer-events: none;
-  border-radius: 24px;
+  display: none;
 }
-
 
 .hero-content {
   position: relative;
   z-index: 2;
-  color: white;
 }
 
-
-/* Typography Refinement */
+/* Typography */
 .main-title {
-  font-size: 3.9rem;       /* tiny boost */
+  font-size: 3.6rem;     /* slightly tighter */
   font-weight: 800;
-  line-height: 1.03;      /* tighter for premium hero feel */
+  line-height: 1.05;
   letter-spacing: -0.025em;
-  color: #0F172A;         /* deeper, more official black */
-  margin-bottom: 28px;
+  color: #0F172A;
+
+  /* reduced margin */
+  margin-bottom: 20px;
 }
 
 .mint {
-  color: #16A34A;         /* more modern green */
+  color: #16A34A;
 }
 
 .hero-description {
-  color: #374151;        /* keep same color */
-  font-size: 1.25rem;
-  line-height: 1.7;     /* slightly more breathing room */
-  max-width: 880px;     /* tighter width = more premium look */
-  margin: 0 auto 48px auto;
-  font-weight: 400;
+  color: #374151;
+  font-size: 1.15rem;
+  line-height: 1.65;
+  max-width: 820px;
 
-  letter-spacing: 0.01em;       /* subtle professional spacing */
-  text-align: center;          /* official hero style */
+  /* reduced margin */
+  margin: 0 auto 32px auto;
+
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-align: center;
 }
 
-
-/* Button Styling from Image */
 .btn-primary {
   background: #0F172A;
   color: #FFFFFF;
   border: 1px solid transparent;
-  padding: 14px 38px;
+
+  /* slightly tighter button */
+  padding: 12px 32px;
+
   border-radius: 999px;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
-  
-  /* Reduced margin-bottom so it sits nicely above the video */
-  margin-bottom: 60px; 
-  
+
+  /* reduced space before video */
+  margin-bottom: 40px;
+
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
   display: inline-block;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
@@ -111,22 +106,28 @@
   box-shadow: 0 14px 30px rgba(0,0,0,0.2);
 }
 
-/* Grid & Card Styling */
+/* Grid */
 .features-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
+
+  /* reduced gap */
+  gap: 12px;
+
   max-width: 1300px;
   margin: 0 auto;
 }
 
 .feature-card {
   background: linear-gradient(180deg, #3D3D3D, #2B2B2B);
-  border-radius: 24px;
-  padding: 48px 36px;
+  border-radius: 22px;
+
+  /* tighter padding */
+  padding: 36px 28px;
+
   text-align: left;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  min-height: 280px;
+  min-height: 260px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 12px 30px rgba(0,0,0,0.25);
@@ -138,114 +139,97 @@
 }
 
 .icon-circle {
-  width: 48px;
-  height: 48px;
-  background: radial-gradient(circle at top left, #5A5A5A, #2F2F2F);
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  margin-bottom: 35px;
+  margin-bottom: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .icon-circle img {
-  width: 50px;
-  height: 50px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
-  filter: brightness(0) invert(1); /* optional: makes icons white */
+  filter: brightness(0) invert(1);
 }
 
 .feature-card h3 {
   color: #FFFFFF;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  margin-bottom: 20px;
-  letter-spacing: -0.01em;
+  margin-bottom: 14px;
 }
 
 .feature-card p {
-  color: #D1D1D1; /* Lighter text for the description on dark cards */
-  font-size: 0.99rem;
-  line-height: 1.6;
-  font-weight: 400;
+  color: #D1D1D1;
+  font-size: 0.95rem;
+  line-height: 1.55;
 }
 
-/* Responsive */
+/* Tablet */
 @media (max-width: 1024px) {
   .features-grid { grid-template-columns: repeat(2, 1fr); }
-  .main-title { font-size: 2.8rem; }
+  .main-title { font-size: 2.6rem; }
 }
 
+/* Phone */
 @media (max-width: 600px) {
-  .features-grid { grid-template-columns: 1fr; }
-  .main-title { font-size: 2.2rem; }
-}
-
-
-/* ============================
-   PHONE RESPONSIVE – HERO ONLY
-   ============================ */
-   @media (max-width: 600px) {
-
-    .hero-section {
-      padding: 80px 16px 60px 16px;
-    }
-  
-    .main-title {
-      font-size: 2rem;
-      line-height: 1.2;
-      margin-bottom: 18px;
-    }
-  
-    .hero-description {
-      font-size: 0.95rem;
-      line-height: 1.5;
-      margin-bottom: 28px;
-      padding: 0 6px;
-    }
-  
-    .btn-primary {
-      padding: 12px 26px;
-      font-size: 0.9rem;
-      margin-bottom: 40px;
-    }
-  
-    .hero-video {
-      width: 100%;
-      max-width: 100%;
-      border-radius: 16px;
-      margin-bottom: 50px;
-    }
-  
-    .features-grid {
-      grid-template-columns: 1fr;
-      gap: 18px;
-    }
-  
-    .feature-card {
-      padding: 28px 22px;
-      min-height: auto;
-    }
-  
-    .icon-circle {
-      width: 42px;
-      height: 42px;
-      margin-bottom: 20px;
-    }
-  
-    .icon-circle img {
-      width: 28px;
-      height: 28px;
-    }
-  
-    .feature-card h3 {
-      font-size: 1.05rem;
-      margin-bottom: 12px;
-    }
-  
-    .feature-card p {
-      font-size: 0.9rem;
-      line-height: 1.5;
-    }
+  .hero-section {
+    padding: 56px 14px 48px;
   }
-  
+
+  .main-title {
+    font-size: 1.9rem;
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    margin-bottom: 22px;
+    padding: 0 4px;
+  }
+
+  .btn-primary {
+    padding: 10px 22px;
+    font-size: 0.85rem;
+    margin-bottom: 28px;
+  }
+
+  .video-wrapper {
+    width: 100%;
+    margin-bottom: 36px;
+    border-radius: 16px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .feature-card {
+    padding: 22px 18px;
+  }
+
+  .icon-circle {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 14px;
+  }
+
+  .icon-circle img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .feature-card h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .feature-card p {
+    font-size: 0.9rem;
+  }
+}

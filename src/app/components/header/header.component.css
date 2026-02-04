@@ -2,46 +2,40 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.8rem 8%;
-  background: #D6D6D6; /* softer, more professional than dark grey */
+
+  /* reduced padding (was 1.8rem 8%) */
+  padding: 1.2rem 6%;
+
+  background: #D6D6D6;
   border-bottom: 1px solid #E5E7EB;
   position: sticky;
   top: 0;
   z-index: 1000;
-
-  /* NEW */
   backdrop-filter: saturate(1.2) blur(4px);
 }
 
-
+/* merged duplicate logo styles */
 .logo {
-  color: #007520; 
+  color: #0F5132;
   font-weight: 800;
-  /* Zoomed effect: Increased font size from 1.2rem to 1.6rem */
-  font-size: 1.6rem; 
+  font-size: 1.6rem;   /* slightly tighter */
   letter-spacing: 1.5px;
-  cursor: pointer;
-}
-
-.logo {
-  color: #0F5132; /* slightly richer green */
-  font-weight: 800;
-  font-size: 1.7rem;
-  letter-spacing: 2px;
   cursor: pointer;
   text-transform: uppercase;
 }
 
 .logo span {
-  color: #0F5132; /* subtle contrast for ZERO */
+  color: #0F5132;
 }
-
 
 .nav-links a {
   color: #1F2933;
   text-decoration: none;
-  margin: 0 2rem;
-  font-size: 1.05rem;
+
+  /* reduced gap (was 2rem) */
+  margin: 0 1.4rem;
+
+  font-size: 1rem;
   font-weight: 600;
   position: relative;
   transition: color 0.25s ease;
@@ -51,7 +45,7 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: -6px;
+  bottom: -5px; /* slightly tighter */
   width: 0%;
   height: 2px;
   background: #16A34A;
@@ -65,13 +59,17 @@
 .nav-links a:hover::after {
   width: 100%;
 }
+
 .demo-btn {
   background: #0F172A;
   color: #FFFFFF;
   border: 1px solid transparent;
-  padding: 0.8rem 2.1rem;
+
+  /* reduced padding (was 0.8rem 2.1rem) */
+  padding: 0.65rem 1.7rem;
+
   border-radius: 999px;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease;
@@ -85,28 +83,26 @@
 }
 
 /* ============================
-   PHONE RESPONSIVE – HEADER ONLY
+   PHONE RESPONSIVE – HEADER
    ============================ */
-   @media (max-width: 600px) {
-
-    .navbar {
-      padding: 1rem 5%;
-      gap: 10px;
-    }
-  
-    .logo {
-      font-size: 1.3rem;
-      letter-spacing: 1px;
-    }
-  
-    .nav-links {
-      display: none; /* hide links on phone */
-    }
-  
-    .demo-btn {
-      padding: 0.6rem 1.2rem;
-      font-size: 0.85rem;
-      white-space: nowrap;
-    }
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0.75rem 4%;  /* less tall on phone */
+    gap: 8px;
   }
-  
+
+  .logo {
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .demo-btn {
+    padding: 0.55rem 1.1rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+}

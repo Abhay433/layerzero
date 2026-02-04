@@ -4,13 +4,13 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { SupabaseService } from '../../services/supabase.service';
 
 @Component({
-  selector: 'app-usecase',
+  selector: 'app-features',
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './features.component.html',
   styleUrl: './features.component.css'
 })
-export class UsecaseComponent {
+export class FeaturesComponent {
   capabilities = [
     { title: 'Unified 3D Workspace', desc: 'High-performance environment for multi-layer Earth data exploration and visualization.' },
     { title: 'Smart Remote Sensing', desc: 'Automated ingestion of Sentinel, Landsat, ASTER, and commercial imagery with AI processing.' },

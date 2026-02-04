@@ -1,11 +1,11 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { FeaturesComponent } from '../features/features.component';
 import { CommonModule } from '@angular/common';
-import { FeaturesComponent } from "../usecase/usecase.component";
-import { UsecaseComponent } from "../features/features.component";
+import { UsecaseComponent } from "../usecase/usecase.component";
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule,],
+  imports: [CommonModule,FeaturesComponent,UsecaseComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -23,7 +23,7 @@ export class HomeComponent {
     },
     { 
       title: 'Real time insights', 
-      desc: 'Refine your decisions and outcomes based on reasoned explanations in real time 24x7.', 
+      desc: 'Accelerate your decision making with high precision spatial data and automated insights generated in real time.', 
       icon: 'assets/insight.png'
     },
     { 
