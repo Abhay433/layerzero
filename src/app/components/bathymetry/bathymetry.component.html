@@ -1,22 +1,7 @@
-<!-- Hero Section -->
-<section class="bathymetry-hero">
-  <div class="hero-text">
-    <h1>High Resolution Bathymetry</h1>
-    <p class="hero-subtitle">
-      Real-Time Multibeam and Backscatter Processing with LyzoAI
-    </p>
-    <p>
-      The LyzoAI engine bridges the gap between acquisition and delivery.
-      By automating the cleaning, gridding, and normalization of acoustic data
-      in real time, LyzoAI eliminates post-processing bottlenecks and empowers
-      survey crews with immediate seabed intelligence while still offshore.
-    </p>
-  </div>
+<section class="bathymetry-management">
 
-  <!-- Workflow graphic stays the same -->
   <div class="workflow-block">
     <h3 class="workflow-title">Data Processing Workflow</h3>
-
     <div class="workflow-container">
       <div class="step input">Raw Multibeam Data (EM122)</div>
       <div class="connector"></div>
@@ -36,93 +21,111 @@
     </div>
   </div>
 
-  <!-- Optional workflow image -->
-  <!-- <div class="hero-image">
-    <img src="assets/multibeam_workflow.png" alt="LyzoAI real-time multibeam processing workflow" />
-  </div> -->
-</section>
 
-<!-- Updated Workflow Content -->
-<section class="workflow">
-
-  <article class="workflow-step">
-    <h2>📡 Universal Data Ingestion</h2>
-    <p>
-      LyzoAI integrates seamlessly with a wide range of multibeam and
-      echosounder systems without disrupting active acquisition.
+  <header class="bathymetry-intro">
+    <h1 class="bathymetry-title">HIGH RESOLUTION BATHYMETRY</h1>
+    <h2 class="bathymetry-subtitle">Real-Time Multibeam and Backscatter Processing with LyzoAI</h2>
+    <p class="bathymetry-description">
+      From live multibeam acquisition to decision-ready seabed products, LyzoAI delivers 
+      real-time bathymetry and backscatter processing within a single intelligent platform. 
+      This workflow eliminates post-processing bottlenecks and enables offshore survey teams 
+      to make informed decisions instantly.
     </p>
-    <ul>
-      <li>Supports Reson 7125, T20, T51, EM2040, EM710, EM3002, EM302, EM122</li>
-      <li>Compatible with EK60, EK80, and ME70 systems</li>
-      <li>Direct ingestion of raw acoustic data during live acquisition</li>
-      <li>Time-synchronized navigation, attitude, and sound velocity input</li>
-    </ul>
-  </article>
+  </header>
 
-  <article class="workflow-step">
-    <h2>⚙️ Signal Conditioning</h2>
-    <p>
-      Incoming acoustic measurements are automatically conditioned to
-      remove system and environmental effects in real time.
-    </p>
-    <ul>
-      <li>Beam-wise correction for vessel motion and refraction</li>
-      <li>Adaptive filtering of water-column noise and acoustic artifacts</li>
-      <li>Dynamic identification of dropouts, spikes, and multipath returns</li>
-    </ul>
-  </article>
+  <div class="bathymetry-grid">
 
-  <article class="workflow-step">
-    <h2>🧠 AI Cleaning & Quality Control</h2>
-    <p>
-      Self-learning AI models continuously adapt to survey conditions,
-      ensuring consistent data quality throughout acquisition.
-    </p>
-    <ul>
-      <li>Automated outlier rejection for bathymetry and backscatter</li>
-      <li>Context-aware thresholds adapting to depth and seabed roughness</li>
-      <li>Continuous reliability scoring for every sounding and intensity value</li>
-    </ul>
-  </article>
+    <div class="bathymetry-card">
+      <div class="card-header">
+        <span class="card-icon">📡</span>
+        <h3>Universal Data Ingestion</h3>
+      </div>
+      <ul class="card-list">
+        <li>Supports EM2040, EM710, EM302, EM122, Reson 7125 and more.</li>
+        <li>Direct ingestion of raw multibeam and echosounder data.</li>
+        <li>Time-synchronized navigation, attitude and SVP input.</li>
+        <li>Zero disruption to live acquisition workflows.</li>
+      </ul>
+    </div>
 
-  <article class="workflow-step">
-    <h2>🗺️ Real-Time Gridding</h2>
-    <p>
-      Cleaned soundings are gridded instantly, providing a live view
-      of seabed coverage and surface integrity.
-    </p>
-    <ul>
-      <li>Automatic grid resolution based on depth and footprint size</li>
-      <li>Seamless surface updates as new data arrives</li>
-      <li>Immediate detection of line offsets, striping, and beam-edge noise</li>
-    </ul>
-  </article>
+    <div class="bathymetry-card">
+      <div class="card-header">
+        <span class="card-icon">⚙️</span>
+        <h3>Signal Conditioning</h3>
+      </div>
+      <ul class="card-list">
+        <li>Beam-wise correction for vessel motion and refraction.</li>
+        <li>Adaptive filtering of water-column noise and artifacts.</li>
+        <li>Dynamic detection of spikes, dropouts, and multipath returns.</li>
+        <li>Real-time environmental correction pipelines.</li>
+      </ul>
+    </div>
 
-  <article class="workflow-step">
-    <h2>📊 Backscatter Processing & Insights</h2>
-    <p>
-      Backscatter intensity is normalized and analysed alongside bathymetry
-      to deliver meaningful seabed context.
-    </p>
-    <ul>
-      <li>Angle, range, and transmission-loss normalization</li>
-      <li>Joint bathymetry and backscatter analysis for boundary detection</li>
-      <li>Optional clustering for preliminary seabed classification</li>
-    </ul>
-  </article>
+    <div class="bathymetry-card">
+      <div class="card-header">
+        <span class="card-icon">🧠</span>
+        <h3>AI Cleaning & Quality Control</h3>
+      </div>
+      <ul class="card-list">
+        <li>AI-driven outlier rejection for bathymetry & backscatter.</li>
+        <li>Context-aware thresholds by depth and seabed roughness.</li>
+        <li>Continuous confidence scoring for each sounding.</li>
+        <li>Self-learning models adapt during acquisition.</li>
+      </ul>
+    </div>
 
-  <article class="workflow-step">
-    <h2>📦 Delivery & Survey Feedback</h2>
-    <p>
-      LyzoAI delivers decision-ready products before the vessel returns to port,
-      reducing risk and rework.
-    </p>
-    <ul>
-      <li>Export clean bathymetric grids and backscatter mosaics offshore</li>
-      <li>Significant reduction in manual post-processing effort</li>
-      <li>Standard outputs for hydrography, engineering, and habitat mapping</li>
-    </ul>
-  </article>
+    <div class="bathymetry-card">
+      <div class="card-header">
+        <span class="card-icon">🗺️</span>
+        <h3>Real-Time Gridding</h3>
+      </div>
+      <ul class="card-list">
+        <li>Automatic grid resolution based on depth and footprint.</li>
+        <li>Live seabed surface updates as data streams in.</li>
+        <li>Immediate detection of striping and offsets.</li>
+        <li>Quality monitoring during line acquisition.</li>
+      </ul>
+    </div>
+
+    <div class="bathymetry-card">
+      <div class="card-header">
+        <span class="card-icon">📊</span>
+        <h3>Backscatter Processing & Insights</h3>
+      </div>
+      <ul class="card-list">
+        <li>Angle, range and transmission loss normalization.</li>
+        <li>Joint bathymetry & backscatter interpretation.</li>
+        <li>Optional clustering for seabed classification.</li>
+        <li>Instant seabed texture visualization offshore.</li>
+      </ul>
+    </div>
+
+    <div class="bathymetry-card">
+      <div class="card-header">
+        <span class="card-icon">📦</span>
+        <h3>Delivery & Survey Feedback</h3>
+      </div>
+      <ul class="card-list">
+        <li>Export grids and mosaics offshore.</li>
+        <li>Reduced re-survey and rework risk.</li>
+        <li>Standard outputs for hydrography & engineering.</li>
+        <li>Decision-ready seabed products before port arrival.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer class="bathymetry-reliability">
+    <div class="reliability-content">
+      <span>🔍</span>
+      <p>
+        <strong>Survey-Grade Reliability:</strong> LyzoAI ensures the transition from raw 
+        acoustic soundings to validated bathymetric products happens in real time, 
+        delivering offshore intelligence in hours instead of weeks.
+      </p>
+    </div>
+  </footer>
+
   <section class="performance-intro">
     <h2 class="viz-title-main">🔍 Proven Performance</h2>
     <p class="viz-description-main">
@@ -138,18 +141,20 @@
   <section class="visualization-section">
     <div class="viz-content">
       <div class="viz-image-wrapper">
-        <img src="assets/bathymetry-map.png" alt="Multibeam bathymetry map processed with LizoAI" class="viz-image" />
+        <img src="assets/bathymetry-map.png"
+             alt="Multibeam bathymetry map processed with LizoAI"
+             class="viz-image" />
       </div>
   
       <div class="viz-stats">
         <h3 class="stats-title">Survey Summary</h3>
         <div class="stats-grid">
-          <div class="stat-card"> <span class="stat-label">System</span> <span class="stat-value">Kongsberg EM122</span> </div>
-          <div class="stat-card"> <span class="stat-label">Grid Resolution</span> <span class="stat-value">128 m × 128 m</span> </div>
-          <div class="stat-card"> <span class="stat-label">Total Points</span> <span class="stat-value">170,968</span> </div>
-          <div class="stat-card"> <span class="stat-label">Depth Range</span> <span class="stat-value">3,692 m</span> </div>
-          <div class="stat-card"> <span class="stat-label">Mean Depth</span> <span class="stat-value">−2,785.7 m</span> </div>
-          <div class="stat-card"> <span class="stat-label">Processing</span> <span class="stat-value">LizoAI Engine</span> </div>
+          <div class="stat-card"><span class="stat-label">System</span><span class="stat-value">Kongsberg EM122</span></div>
+          <div class="stat-card"><span class="stat-label">Grid Resolution</span><span class="stat-value">128 m × 128 m</span></div>
+          <div class="stat-card"><span class="stat-label">Total Points</span><span class="stat-value">170,968</span></div>
+          <div class="stat-card"><span class="stat-label">Depth Range</span><span class="stat-value">3,692 m</span></div>
+          <div class="stat-card"><span class="stat-label">Mean Depth</span><span class="stat-value">−2,785.7 m</span></div>
+          <div class="stat-card"><span class="stat-label">Processing</span><span class="stat-value">LizoAI Engine</span></div>
         </div>
       </div>
     </div>

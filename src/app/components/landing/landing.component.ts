@@ -9,8 +9,8 @@ import { UsecaseComponent } from '../usecase/usecase.component';
   imports: [HomeComponent, FeaturesComponent, UsecaseComponent],
   template: `
     <section id="home"><app-home></app-home></section>
-    <section id="features"><app-features></app-features></section>
-    <section id="use-cases"><app-usecase></app-usecase></section>
+    <section id="use-cases"><app-features></app-features></section>
+    <section id="features"><app-usecase></app-usecase></section>
   `
 })
 export class LandingComponent {}
