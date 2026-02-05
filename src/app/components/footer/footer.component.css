@@ -6,7 +6,18 @@
   padding: 32px 80px 16px;
 
   font-family: 'Inter', sans-serif;
-  box-shadow: 0 -20px 40px rgba(0,0,0,0.08) inset;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);   /* 👈 PRO divider */
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5%;
+  width: 90%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(0,0,0,0.25), transparent);
 }
 
 /* Layout */
@@ -15,22 +26,23 @@
   justify-content: space-between;
 
   /* reduced big gap */
-  gap: 40px;
+  gap: 32px; 
 
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 
 /* Headings */
 .footer-col h3 {
-  font-size: 1.05rem;
+  font-size: 1.3rem;
 
   /* reduced margin */
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 
-  font-weight: 800;
-  letter-spacing: 0.03em;
+  font-weight: 900;
+  letter-spacing: 0.04em;
   color: #0F172A;
   text-transform: uppercase;
+  font-size: large;
 }
 
 /* Newsletter */
@@ -50,7 +62,7 @@
   gap: 10px;
 
   /* reduced bottom gap */
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .subscribe-box input {
@@ -157,7 +169,7 @@ ul li a:hover {
 
 /* Brand */
 .brand-section {
-  margin-top: 16px;
+  margin-top: 10px;
 }
 
 .footer-logo {
@@ -173,15 +185,32 @@ ul li a:hover {
   letter-spacing: 0.04em;
 }
 
+.footer-col ul {
+  padding-left: 0;     /* 🔥 removes default left indent */
+  margin-left: 0;
+  list-style: none;
+  /* optional: removes bullet spacing */
+}
+
 /* Bottom Bar */
 .footer-bottom {
   text-align: center;
 
   /* tighter spacing */
-  margin-top: 24px;
-  padding-top: 16px;
+  margin-top: 16px;     /* ⬇ was 24px */
+  padding-top: 12px;
 
-  border-top: 2px solid rgba(0,0,0,0.08);
+  border-top: 1px solid rgba(15, 23, 42, 0.15);
+}
+
+.footer-bottom::before {
+  content: "";
+  display: block;
+  width: 160px;
+  height: 2px;
+  margin: 0 auto 12px;
+  background: linear-gradient(to right, transparent, #0F172A, transparent);
+  opacity: 0.3;
 }
 
 .footer-bottom p {
@@ -219,6 +248,7 @@ ul li a:hover {
   .footer-col h3 {
     font-size: 0.9rem;
     margin-bottom: 14px;
+    
   }
 
   .input-label {
@@ -244,7 +274,7 @@ ul li a:hover {
   }
 
   .footer-logo {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     letter-spacing: 2px;
   }
 

@@ -1,11 +1,9 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { FeaturesComponent } from '../features/features.component';
 import { CommonModule } from '@angular/common';
-import { UsecaseComponent } from "../usecase/usecase.component";
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule,FeaturesComponent,UsecaseComponent],
+  imports: [CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

@@ -1,16 +1,21 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { SupabaseService } from '../../services/supabase.service';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-usecase',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,FormsModule],
   templateUrl: './usecase.component.html',
   styleUrl: './usecase.component.css'
 })
 export class UsecaseComponent {
-  constructor(private router: Router) {}
+  constructor(private router: Router,
+    private supabaseService: SupabaseService
+
+  ) {}
 
   onExplore(item: any) {
     console.log('Explore clicked for:', item.title);
@@ -47,4 +52,38 @@ export class UsecaseComponent {
       desc: 'LizoAI automates the ingestion of daily Synthetic Aperture Radar (SAR) and high-resolution optical data to run continuous time-series change detection over strategic areas. Using pixel-based classification and deep learning object detection nodes, the platform practically isolates new infrastructure development, tracks heavy vehicle movements, and maps the expansion of defensive trenches.' 
     }
   ];
+
+  form = {
+    first_name: '',
+    last_name: '',
+    email: '',
+    address: ''
+  };
+  isSubmitting = false;
+
+
+  async onSubmit(contactForm: NgForm) {
+    // 1. Extra safety check: if form is invalid, stop here
+    if (contactForm.invalid || this.isSubmitting) {
+      return;
+    }
+  
+    this.isSubmitting = true;
+  
+    const { error } = await this.supabaseService.saveContact(this.form);
+  
+    if (error) {
+      console.error(error);
+      alert('❌ Failed to submit form');
+    } else {
+      alert('✅ Message sent successfully!');
+      
+      // 2. Reset the form and the validation state
+      contactForm.resetForm(); 
+      this.form = { first_name: '', last_name: '', email: '', address: '' };
+    }
+  
+    this.isSubmitting = false;
+  }
+  
 }

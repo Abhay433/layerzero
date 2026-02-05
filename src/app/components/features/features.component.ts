@@ -20,39 +20,7 @@ export class FeaturesComponent {
     { title: 'Custom feature development', desc: 'Customization ability to meet your business needs upto any level.' }
   ];
 
-   form = {
-    first_name: '',
-    last_name: '',
-    email: '',
-    address: ''
-  };
-  isSubmitting = false;
-
-  constructor(private supabaseService: SupabaseService) {}
-
-  async onSubmit(contactForm: NgForm) {
-    // 1. Extra safety check: if form is invalid, stop here
-    if (contactForm.invalid || this.isSubmitting) {
-      return;
-    }
   
-    this.isSubmitting = true;
-  
-    const { error } = await this.supabaseService.saveContact(this.form);
-  
-    if (error) {
-      console.error(error);
-      alert('❌ Failed to submit form');
-    } else {
-      alert('✅ Message sent successfully!');
-      
-      // 2. Reset the form and the validation state
-      contactForm.resetForm(); 
-      this.form = { first_name: '', last_name: '', email: '', address: '' };
-    }
-  
-    this.isSubmitting = false;
-  }
 
   
 }
