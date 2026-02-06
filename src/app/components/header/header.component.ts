@@ -36,7 +36,7 @@ export class HeaderComponent {
     if (element) {
       const yOffset = -105;
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
+      window.scrollTo({ top: y, behavior: 'auto' });
     }
   }
   

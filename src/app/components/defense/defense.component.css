@@ -150,28 +150,77 @@
   font-weight: 800;
 }
 
-/* --- Responsive Behavior --- */
+/* ===============================
+   DEFENSE SECTION – MOBILE POLISH
+================================ */
+
+/* Make grid fluid (not locked to 2 cols) */
+.defense-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Tablet tuning */
 @media (max-width: 1024px) {
-  .defense-grid {
-      grid-template-columns: 1fr;
-  }
-  
   .defense-main-title {
-      font-size: 2.4rem;
+    font-size: 2.2rem;
+    line-height: 1.1;
+  }
+
+  .defense-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .defense-description {
+    font-size: 1.05rem;
   }
 }
 
+/* Phone tuning */
 @media (max-width: 640px) {
-  .defense-header {
-      margin-bottom: 50px;
+  .defense-section {
+    margin: 70px auto;
+    padding: 0 16px;
   }
-  
+
+  .defense-main-title {
+    font-size: 1.9rem;
+  }
+
+  .defense-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.4;
+  }
+
+  .defense-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
   .defense-card {
-      padding: 30px;
+    padding: 22px;
+    border-radius: 20px;
   }
-  
-  .footer-content {
-      flex-direction: column;
-      text-align: center;
+
+  .card-top h3 {
+    font-size: 1.1rem;
   }
+
+  .card-points li {
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .defense-footer {
+    padding: 22px 20px;
+    border-radius: 18px;
+  }
+
+  .footer-content p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Kill horizontal scroll issues */
+html, body {
+  overflow-x: hidden;
 }

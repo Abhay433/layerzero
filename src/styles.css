@@ -16,7 +16,7 @@ body {
   font-family: 'Inter', -apple-system, sans-serif;
 }
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
   }
   
   /* Ensure sections have enough space to scroll into view */

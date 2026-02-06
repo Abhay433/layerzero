@@ -12,6 +12,8 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './usecase.component.css'
 })
 export class UsecaseComponent {
+
+  emailExists: boolean = false;
   constructor(private router: Router,
     private supabaseService: SupabaseService
 
@@ -62,28 +64,58 @@ export class UsecaseComponent {
   isSubmitting = false;
 
 
+  async checkEmailOnBlur() {
+    // Don't check if the field is empty or invalid format
+    if (!this.form.email || !this.form.email.includes('@')) return;
+  
+    const { data } = await this.supabaseService
+      .getClient()
+      .from('contact_messages') // Replace with your actual table name
+      .select('email')
+      .eq('email', this.form.email)
+      .maybeSingle();
+  
+    this.emailExists = !!data; // Sets true if data exists, false if null
+  }
+
+
   async onSubmit(contactForm: NgForm) {
-    // 1. Extra safety check: if form is invalid, stop here
-    if (contactForm.invalid || this.isSubmitting) {
-      return;
-    }
+    if (contactForm.invalid || this.isSubmitting) return;
   
     this.isSubmitting = true;
+    
   
-    const { error } = await this.supabaseService.saveContact(this.form);
+    try {
+      // 1. Correct way to call the client from the service
+      const { data, error: checkError } = await this.supabaseService
+        .getClient() // Just call the function here
+        .from('contact_messages') // Replace with your actual table name
+        .select('email')
+        .eq('email', this.form.email)
+        .maybeSingle();
   
-    if (error) {
-      console.error(error);
-      alert('❌ Failed to submit form');
-    } else {
-      alert('✅ Message sent successfully!');
-      
-      // 2. Reset the form and the validation state
-      contactForm.resetForm(); 
-      this.form = { first_name: '', last_name: '', email: '', address: '' };
+      if (data) {
+        alert('⚠️ This email is already registered!');
+        this.isSubmitting = false;
+        return; 
+      }
+  
+      // 2. Proceed if email is unique
+      const { error } = await this.supabaseService.saveContact(this.form);
+  
+      if (error) {
+        alert('❌ Failed to submit form');
+      } else {
+        alert('✅ Message sent successfully!');
+        contactForm.resetForm();
+        this.form = { first_name: '', last_name: '', email: '', address: '' };
+      }
+    } catch (err) {
+      console.error('System error:', err);
+    } finally {
+      this.isSubmitting = false;
     }
-  
-    this.isSubmitting = false;
   }
-  
+
+
 }

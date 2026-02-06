@@ -5,6 +5,9 @@ import { createClient, SupabaseClient } from '@supabase/supabase-js';
   providedIn: 'root'
 })
 export class SupabaseService {
+  getClient() {
+    return this.supabase;
+  }
   private supabase: SupabaseClient;
 
   constructor() {

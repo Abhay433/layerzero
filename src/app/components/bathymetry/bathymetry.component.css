@@ -62,25 +62,69 @@
 
 .bathymetry-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* Clean 2-column layout */
   gap: 30px;
   margin-bottom: 60px;
 }
 
 .bathymetry-card {
+  
   background: linear-gradient(180deg, #F9FAFB 0%, #F3F4F6 100%);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 24px;
   padding: 35px;
-  border: 1px solid rgba(0,0,0,0.05);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.04);
-  transition: 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .bathymetry-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
   border-color: #1a4d2e33;
 }
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.card-icon {
+  font-size: 1.8rem;
+}
+
+.card-header h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #111827;
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+}
+
+.card-list li {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #374151;
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.card-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  background-color: #1a4d2e;
+  border-radius: 50%;
+}
+
 
 .bathymetry-reliability {
   background: #111827;
@@ -116,16 +160,16 @@
 }
 
 .viz-title-main {
-  font-size: 2.4rem;
-  font-weight: 800;
+  font-size: 2.9rem;
+  font-weight: 900;
   color: #111;
   margin-bottom: 12px;
   letter-spacing: 0.02em;
 }
 
 .viz-description-main {
-  font-size: 1.05rem;          /* slightly smaller */
-  font-weight: 400;           /* lighter weight */
+  font-size: 1.09rem;          /* slightly smaller */
+  font-weight: 500;           /* lighter weight */
   color: #444;                /* softer than pure black */
   max-width: 700px;           /* tighter width */
   line-height: 1.7;           /* readable, not tall */
@@ -309,4 +353,99 @@
   .viz-image-wrapper {
       padding: 10px;
   }
+}
+
+/* ===============================
+   MOBILE RESPONSIVE FIXES
+================================ */
+
+/* Fix image overflow on mobile */
+@media (max-width: 768px) {
+  .viz-image {
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+  }
+
+  .viz-image-wrapper {
+    padding: 16px;
+    min-height: auto;
+  }
+}
+
+/* Stack workflow nicely */
+@media (max-width: 768px) {
+  .workflow-title {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+  }
+
+  .workflow-container .step {
+    font-size: 0.9rem;
+    padding: 14px 12px;
+    max-width: 100%;
+  }
+}
+
+/* Scale hero text properly */
+@media (max-width: 768px) {
+  .bathymetry-title {
+    font-size: 1.9rem;
+    line-height: 1.2;
+  }
+
+  .bathymetry-subtitle {
+    font-size: 1.15rem;
+  }
+
+  .bathymetry-description {
+    font-size: 1rem;
+  }
+}
+
+/* Fix cards spacing */
+@media (max-width: 768px) {
+  .bathymetry-grid {
+    gap: 18px;
+  }
+
+  .bathymetry-card {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .card-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .card-list li {
+    font-size: 0.9rem;
+  }
+}
+
+/* Visualization section spacing */
+@media (max-width: 768px) {
+  .visualization-section {
+    padding: 24px 16px;
+    border-radius: 22px;
+    margin: 0 14px 60px;
+  }
+
+  .viz-title-main {
+    font-size: 2rem;
+  }
+
+  .viz-description-main {
+    font-size: 0.95rem;
+  }
+
+  .viz-stats {
+    padding: 20px;
+  }
+}
+
+/* Prevent horizontal scroll globally */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }

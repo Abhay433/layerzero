@@ -149,28 +149,75 @@
     font-weight: 800;
   }
   
-  /* --- Responsive Behavior --- */
-  @media (max-width: 1024px) {
-    .logistics-grid {
-      grid-template-columns: 1fr; /* Single column on tablet */
-    }
-    
-    .logistics-main-title {
-      font-size: 2.4rem;
-    }
+  /* ===============================
+   LOGISTICS – MOBILE FIXES
+================================ */
+
+/* Make grid fluid instead of rigid 2 columns */
+.logistics-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* Tablet refinements */
+@media (max-width: 1024px) {
+  .logistics-main-title {
+    font-size: 2.2rem;
+    line-height: 1.1;
   }
-  
-  @media (max-width: 640px) {
-    .logistics-header {
-      margin-bottom: 50px;
-    }
-    
-    .logistics-card {
-      padding: 30px;
-    }
-    
-    .footer-content {
-      flex-direction: column;
-      text-align: center;
-    }
+
+  .logistics-subtitle {
+    font-size: 1.25rem;
   }
+
+  .logistics-description {
+    font-size: 1.05rem;
+  }
+}
+
+/* Phone refinements */
+@media (max-width: 640px) {
+  .logistics-section {
+    margin: 60px auto;
+    padding: 0 16px;
+  }
+
+  .logistics-main-title {
+    font-size: 1.9rem;
+  }
+
+  .logistics-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .logistics-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .logistics-card {
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .card-top h3 {
+    font-size: 1.1rem;
+  }
+
+  .card-points li {
+    font-size: 0.92rem;
+  }
+
+  .logistics-footer {
+    padding: 24px 20px;
+    border-radius: 18px;
+  }
+
+  .footer-content p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Prevent horizontal scroll on mobile */
+html, body {
+  overflow-x: hidden;
+}

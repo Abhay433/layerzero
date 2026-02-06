@@ -4,7 +4,7 @@
   color: #1A1A1A;
 
   /* reduced vertical padding */
-  padding: 32px 6% 32px;
+  padding: 100px 6% 32px;
 
   font-family: 'Inter', sans-serif;
 }
@@ -186,18 +186,18 @@
 
 
 /* Bottom Integration Section */
-.integrate-section {
+/* .integrate-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
 
   /* reduced huge gap */
-  gap: 56px;
+  /* gap: 56px;
 
   align-items: center;
 
   /* reduced padding */
-  padding-bottom: 64px;
-}
+  /* padding-bottom: 64px;
+/* } */ 
 
 .integrate-title { 
   font-size: 2.8rem;
@@ -240,11 +240,21 @@
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  gap: 20px;
+  width: 100%;
 }
 
 .form-group {
-  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  /* Prevents the group from overflowing the grid cell */
+  width: 100%; 
+}
+
+.form-group input {
+  /* This is the most important line! */
+  width: 100%; 
+  box-sizing: border-box; /* Ensures padding doesn't make the box wider than 100% */
 }
 
 label {
@@ -352,3 +362,37 @@ input::placeholder {
 }
 
 
+@media (max-width: 600px) {
+  /* ... keep your existing phone styles ... */
+
+  /* 1. Stack the Integrate Section (Text + Form) */
+  .integrate-section {
+    grid-template-columns: 1fr; /* Stack vertically */
+    gap: 32px; /* Reduce gap between text and form */
+    padding-bottom: 40px;
+    text-align: center; /* Center the text for mobile */
+  }
+
+  .integrate-title {
+    font-size: 2rem; /* Shrink the big title */
+    line-height: 1.1;
+  }
+
+  /* 2. Stack the First Name and Last Name */
+  .form-row {
+    grid-template-columns: 1fr; /* Make name fields full-width */
+    gap: 14px;
+  }
+
+  /* 3. Make the Submit Button full-width on mobile */
+  .submit-btn-gradient {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  /* 4. Fix padding for the contact form */
+  .contact-card-dark {
+    padding: 28px 20px;
+    border-radius: 18px;
+  }
+}
