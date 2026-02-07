@@ -39,6 +39,10 @@ export class HeaderComponent {
       window.scrollTo({ top: y, behavior: 'auto' });
     }
   }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
   
 
 }
