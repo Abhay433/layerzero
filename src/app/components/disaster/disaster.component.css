@@ -51,10 +51,9 @@
   
   /* --- Technical Grid --- */
   .disaster-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Clean 2-column layout */
-    gap: 30px;
-    margin-bottom: 60px;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 30px !important;
   }
   
   .disaster-card {
@@ -150,7 +149,10 @@
 
 /* Make grid fluid instead of hard 2 columns */
 .disaster-grid {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Clean 2-column layout */
+  gap: 30px;
+  margin-bottom: 60px;
 }
 
 /* Tablet tuning */

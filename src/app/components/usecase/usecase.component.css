@@ -184,20 +184,13 @@
   }
 }
 
-
-/* Bottom Integration Section */
-/* .integrate-section {
+ .integrate-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-
-  /* reduced huge gap */
-  /* gap: 56px;
-
+  gap: 56px;           /* reduced huge gap */
   align-items: center;
-
-  /* reduced padding */
-  /* padding-bottom: 64px;
-/* } */ 
+  padding-bottom: 64px; /* reduced padding */
+}
 
 .integrate-title { 
   font-size: 2.8rem;

@@ -155,36 +155,45 @@
 
 .performance-intro {
   text-align: center;
-  padding: 80px 6% 40px;
-  /* matches your light section */
+  padding: 10px 3% 10px;
+  background: radial-gradient(120% 120% at 50% 0%, #0b1220 0%, #020617 70%);
+  border-radius: 35px;
+  color: #F3F4F6;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+  margin-bottom: 100px;
 }
 
+/* Title */
 .viz-title-main {
-  font-size: 2.9rem;
+  font-size: 2.6rem;
   font-weight: 900;
-  color: #111;
-  margin-bottom: 12px;
-  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
 }
 
 .viz-description-main {
-  font-size: 1.09rem;          /* slightly smaller */
-  font-weight: 500;           /* lighter weight */
-  color: #444;                /* softer than pure black */
-  max-width: 700px;           /* tighter width */
-  line-height: 1.7;           /* readable, not tall */
-  margin: 0 auto 26px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  max-width: 760px;
+  line-height: 1.7;
+  margin: 0 auto 28px;
 }
 
 .viz-subtitle-bar {
   display: inline-block;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #666;
-  padding: 10px 18px;
+  margin-top: 10px;
+  padding: 10px 22px;
   border-radius: 999px;
-  background: rgba(0, 0, 0, 0.05);
-  letter-spacing: 0.05em;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #e5e7eb;
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 
@@ -449,3 +458,4 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
+
